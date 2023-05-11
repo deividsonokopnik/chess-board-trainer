@@ -5,7 +5,7 @@
     <string name="exibir">Exibir Tabuleiro</string>
     <string name="pretas">Pretas</string>
     <string name="tempo_inicial">2</string>
-    <string name="casa_inicial">A1</string>
+    <string name="casa_inicial">--</string>
     <string name="start">START</string>
     <string name="stop">STOP</string>
     <string name="ligadesl">Liga Desliga</string>
