@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">chess-board-trainer</string>
+    <string name="nome">Chess Trainer 1.0</string>
+    <string name="tempo">Tempo (s):</string>
+    <string name="exibir">Exibir Tabuleiro</string>
+    <string name="pretas">Pretas</string>
+    <string name="tempo_inicial">2</string>
+    <string name="casa_inicial">A1</string>
+    <string name="start">START</string>
+    <string name="stop">STOP</string>
+    <string name="ligadesl">Liga Desliga</string>
 </resources>
