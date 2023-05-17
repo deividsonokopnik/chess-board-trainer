@@ -3,10 +3,12 @@ package com.example.chess_board_trainer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.speech.tts.TextToSpeech
 import android.widget.TextView
 import android.widget.ToggleButton
+import android.media.MediaPlayer
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     val delay: Long = 1000000000000000
     val interval: Long = 5000
@@ -17,6 +19,12 @@ class MainActivity : AppCompatActivity() {
             val rnd1 = (1..8).random()
             val rnd2 = listOf(('A'..'H')).flatten().random()
             textView.text = rnd1.toString()+rnd2.toString()
+
+            var mediaPlayer = MediaPlayer.create(baseContext, R.raw.sa)
+            mediaPlayer.start()
+            Thread.sleep(800)
+            mediaPlayer = MediaPlayer.create(baseContext, R.raw.s1)
+            mediaPlayer.start()
         }
 
         override fun onFinish()
@@ -25,7 +33,6 @@ class MainActivity : AppCompatActivity() {
             textView.text = R.string.casa_inicial.toString()
         }
     }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +52,10 @@ class MainActivity : AppCompatActivity() {
                 timer.cancel()
             }
         }
+    }
+
+    override fun onInit(status: Int) {
+        TODO("Not yet implemented")
     }
 
 
