@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             val rnd2 = (1..8).random()
             textView.text = rnd1.toString() + rnd2.toString()
 
-            var mediaPlayer = MediaPlayer.create(baseContext, R.raw.sa);
+            var mediaPlayer = MediaPlayer.create(baseContext, R.raw.sa)
             if(rnd1.toString()=="B") { mediaPlayer = MediaPlayer.create(baseContext, R.raw.sb) }
             if(rnd1.toString()=="C") { mediaPlayer = MediaPlayer.create(baseContext, R.raw.sc) }
             if(rnd1.toString()=="D") { mediaPlayer = MediaPlayer.create(baseContext, R.raw.sd) }
@@ -69,6 +69,36 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
                 timer.cancel()
             }
         }
+
+        /*
+        val switch1:Switch =  findViewById<Switch>(R.id.switch1)
+                switch1.setOnClickListener()
+                {
+                    val imageView:ImageView = findViewById<ImageView>(R.id.imageView)
+                    if(switch1.isChecked)
+                    {
+        //                imageView.visibility= View.VISIBLE
+                    } else {
+        //                imageView.visibility=View.INVISIBLE
+                    }
+        }
+
+         */
+
+        /*
+        val switch2:Switch =  findViewById<Switch>(R.id.switch2)
+
+        switch2.setOnClickListener()
+        {
+            val imageView:ImageView = findViewById<ImageView>(R.id.imageView)
+            if(switch2.isChecked)
+            {
+//                imageView.setImageResource(R.drawable.tab1)
+            } else {
+//                imageView.setImageResource(R.drawable.tab2)
+            }
+        }
+         */
     }
 
     override fun onInit(status: Int) {
