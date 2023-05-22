@@ -7,6 +7,10 @@ import android.speech.tts.TextToSpeech
 import android.widget.TextView
 import android.widget.ToggleButton
 import android.media.MediaPlayer
+import android.view.View
+import android.widget.ImageView
+import android.widget.Switch
+import androidx.appcompat.widget.SwitchCompat
 
 class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
@@ -70,20 +74,15 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             }
         }
 
-        /*
-        val switch1:Switch =  findViewById<Switch>(R.id.switch1)
-                switch1.setOnClickListener()
-                {
-                    val imageView:ImageView = findViewById<ImageView>(R.id.imageView)
-                    if(switch1.isChecked)
-                    {
-        //                imageView.visibility= View.VISIBLE
-                    } else {
-        //                imageView.visibility=View.INVISIBLE
-                    }
+        val switch1:SwitchCompat =  findViewById<SwitchCompat>(R.id.switch1)
+        switch1.setOnCheckedChangeListener { _, isChecked ->
+            val imageView: ImageView = findViewById<ImageView>(R.id.imageView)
+            if (isChecked) {
+                imageView.visibility= View.VISIBLE
+            } else {
+                imageView.visibility= View.INVISIBLE
+            }
         }
-
-         */
 
         /*
         val switch2:Switch =  findViewById<Switch>(R.id.switch2)
