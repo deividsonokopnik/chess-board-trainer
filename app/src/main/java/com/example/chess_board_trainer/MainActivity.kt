@@ -21,7 +21,8 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             val textView: TextView = findViewById(R.id.textView3) as TextView
             val rnd1 = listOf(('A'..'H')).flatten().random()
             val rnd2 = (1..8).random()
-            textView.text = rnd1.toString() + rnd2.toString()
+            textView.text = getString(R.string.casa, rnd1.toString(), rnd2.toString())
+
 
             var mediaPlayer = MediaPlayer.create(baseContext, R.raw.sa)
             if(rnd1.toString()=="B") { mediaPlayer = MediaPlayer.create(baseContext, R.raw.sb) }
