@@ -9,7 +9,6 @@ import android.widget.ToggleButton
 import android.media.MediaPlayer
 import android.view.View
 import android.widget.ImageView
-import android.widget.Switch
 import androidx.appcompat.widget.SwitchCompat
 
 class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
@@ -84,20 +83,16 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             }
         }
 
-        /*
-        val switch2:Switch =  findViewById<Switch>(R.id.switch2)
-
-        switch2.setOnClickListener()
-        {
+        val switch2:SwitchCompat =  findViewById<SwitchCompat>(R.id.switch2)
+        switch2.setOnCheckedChangeListener { _, isChecked ->
             val imageView:ImageView = findViewById<ImageView>(R.id.imageView)
-            if(switch2.isChecked)
+            if(!isChecked)
             {
-//                imageView.setImageResource(R.drawable.tab1)
+                imageView.setImageResource(R.drawable.tab1)
             } else {
-//                imageView.setImageResource(R.drawable.tab2)
+                imageView.setImageResource(R.drawable.tab2)
             }
         }
-         */
     }
 
     override fun onInit(status: Int) {
